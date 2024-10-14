@@ -1,0 +1,13 @@
+---
+- name: Install a Nginx Package
+  hosts: all
+  become: yes
+  vars_files: variables.yml
+  tasks:
+    - name: Ping
+      ansible.builtin.ping:
+      become: true
+    - name: update packages
+      ansible.builtin.package:
+       name: "*"
+       state: latest

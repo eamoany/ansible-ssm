@@ -1,0 +1,12 @@
+# development_aws_ec2.yaml 
+plugin: aws_ec2
+regions:
+  - eu-west-2
+filters:
+   instance-state-name : running
+   tag:Name:
+     - EKS-HAWK-AI-UAT
+hostnames:
+  - name: 'instance-id'                                                         
+compose:
+  ansible_host: instance_id

@@ -1,0 +1,12 @@
+---
+- name: Install a Nginx Package
+  hosts: all
+  become: yes
+  vars_files: variables.yml
+  tasks:
+    - name: Ping
+      ansible.builtin.ping:
+      become: true
+
+    - name: Install a httpd Package
+      ansible.builtin.command: yum remove -y httpd

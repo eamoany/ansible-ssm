@@ -1,0 +1,8 @@
+# development_aws_ec2.yaml 
+plugin: aws_ec2
+regions:
+  - eu-west-2
+hostnames: 
+  - i-07bf49b39b8de315a
+filters:
+   instance-state-name : running
